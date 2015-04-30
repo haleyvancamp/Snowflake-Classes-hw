@@ -11,10 +11,10 @@
 
 
 Snowflake2:: Snowflake2() {
-    myPos = ofVec2f(400, 400);
-    myVel = ofVec2f(ofRandom(-10, 10), ofRandom(-10, 10));
-    red = float(ofGetMouseX()/2);
-    green = float(ofGetMouseY()/2);
+    myPos = ofVec2f(400, 400); // setting position
+    myVel = ofVec2f(ofRandom(-10, 10), ofRandom(-10, 10)); // setting velocity
+    red = float(ofGetMouseX()/2); // red value changes depending on x value of mouse position
+    green = float(ofGetMouseY()/2); // green value changes depending on y value
     blue = float(250);
     
     
@@ -26,19 +26,20 @@ void Snowflake2::setup(float x, float y) {
 }
 
 void Snowflake2::update() {
-    myPos.y += myVel.y;
-    float distance = ofDist(birth.x, birth.y, myPos.x, myPos.y);
+    myPos.y += myVel.y; // moves snowflake
+  
     
 }
 
 void Snowflake2::draw() {
-    ofSetColor(red, green , blue);
+    ofSetColor(red, green , blue); // sets color
     ofPushMatrix();
      ofTranslate(myPos.x, myPos.y);
+    // draws the snowflake
      for(int i=0; i<7; i++) {
-     ofRotate(ofRadToDeg(70));
-     ofLine(0, 0, 8, 0);
+     ofRotate(ofRadToDeg(70)); // each line is rotated to get the snowflake look
+     ofLine(0, 0, 8, 0); // draws line
      }
      ofPopMatrix();
-    //ofCircle(myPos.x, myPos.y, 5);
+    
 }

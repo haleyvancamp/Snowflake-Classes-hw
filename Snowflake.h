@@ -22,11 +22,11 @@ public:
     void setup(float x, float y);
     void update();
     void draw();
-    
-    ofVec2f myPos;
-    ofVec2f myVel;
-    ofVec2f birth;
-    ofColor myColor;
+    // delcaring variables
+    ofVec2f myPos; // position
+    ofVec2f myVel; // velocity
+    ofVec2f birth; // starting point
+    ofColor myColor; // color
     
 };
 

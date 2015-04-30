@@ -1,9 +1,14 @@
+/*
+ Haley Van Camp
+ 4/20/15
+ Snowflakes - classes
+ */
 #pragma once
 
 #include "ofMain.h"
 #include "Snowflake.h"
 #include "Snowflake2.h"
-//#define number 50
+
 
 
 class ofApp : public ofBaseApp{
@@ -23,11 +28,11 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-        //Snowflake mySnowflake;
+    // declaring a vector of Snowflake and Snowflake2
     
     vector<Snowflake> mySnowflakes;
     vector<Snowflake2> myFlakes;
-    //Snowflake mySnowflakes[number];
+   
     
     //ofImage tree;
 		
